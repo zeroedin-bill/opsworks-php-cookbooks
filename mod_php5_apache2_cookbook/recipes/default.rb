@@ -4,12 +4,12 @@ case node[:platform]
 
     if node['platform_version'].to_f >= 7
       # add the EPEL repo
-      yum_repository 'epel' do
-        description 'Extra Packages for Enterprise Linux'
-        mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-7&arch=x86_64'
-        gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7'
-        action :create
-      end
+      #yum_repository 'epel' do
+      #  description 'Extra Packages for Enterprise Linux'
+      #  mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-7&arch=x86_64'
+      #  gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7'
+      #  action :create
+      #end
 
       # add the webtatic repo
       yum_repository 'webtatic' do
@@ -23,12 +23,12 @@ case node[:platform]
       node.set['apache']['package'] = 'httpd'
      else
       # add the EPEL repo
-      yum_repository 'epel' do
-        description 'Extra Packages for Enterprise Linux'
-        mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=x86_64'
-        gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6'
-        action :create
-      end
+      #yum_repository 'epel' do
+      #  description 'Extra Packages for Enterprise Linux'
+      #  mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=x86_64'
+      #  gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6'
+      #  action :create
+      #end
 
       # add the webtatic repo
       yum_repository 'webtatic' do
